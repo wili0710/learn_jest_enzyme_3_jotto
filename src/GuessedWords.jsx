@@ -35,10 +35,10 @@ const GuessedWords = ( props ) =>  {
                                 Matching Letters
                             </th>
                         </tr>
-                        <tbody>
-                            { guessedWordsRows }
-                        </tbody>
                     </thead>
+                    <tbody>
+                        { guessedWordsRows }
+                    </tbody>
                 </table>
             </div>
         )

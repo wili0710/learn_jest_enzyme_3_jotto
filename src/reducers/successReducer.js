@@ -13,6 +13,6 @@ export default ( state= false, action ) => {
             return true;
     
         default:
-            return false;
+            return state;
     }
 }

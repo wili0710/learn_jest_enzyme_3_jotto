@@ -9,9 +9,9 @@ import Input from './input'
  * @param {object} initialState - Initial state for this setup
  * @returns {ShallowWrapper} 
  */
-const setup = (initialState= {}) => {
+const setup = (initialState={}) => {
     const store = storeFactory(initialState)
-    const wrapper = shallow(<Input store={ store } />).dive().dive()
+    const wrapper = shallow(<Input store={store} />).dive().dive()
     return wrapper
 }
 
@@ -21,7 +21,7 @@ describe('render', () => {
         let wrapper
         beforeEach(() => {
             const initialState = { success: false }
-            wrapper = setup( initialState )
+            wrapper = setup(initialState)
         })
         test('renders component without error', () => {
             const component = findByTestAttr( wrapper, "component-input" )
@@ -39,8 +39,8 @@ describe('render', () => {
     describe('word has been guessed', () => {
         let wrapper
         beforeEach(() => {
-            const initialState = { success: true }
-            wrapper = setup( initialState )
+            const initialState = {success: true}
+            wrapper = setup(initialState)
         })
         test('renders component without error', () => {
             const component = findByTestAttr( wrapper, "component-input" )
