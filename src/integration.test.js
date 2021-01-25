@@ -28,7 +28,6 @@ describe('guessWord action dispatcher', () => {
             const newState = store.getState()
             const expectedState = {
                 ...initialState,
-                // initialState diganti ke secretWord
                 success: true,
                 guessedWords: [{
                     guessedWord: secretWord,
